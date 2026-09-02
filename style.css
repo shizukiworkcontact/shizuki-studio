@@ -1133,3 +1133,84 @@ body {
     padding: 45px 7%;
   }
 }
+
+@media (max-width: 700px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  /* 1. CONTACT */
+  .contact-label {
+    order: 1;
+    margin-bottom: 24px;
+  }
+
+  /* 2. お問い合わせ本文 */
+  .contact-main {
+    order: 2;
+    width: 100%;
+  }
+
+  /* 3. LINKS */
+  .contact-links-label {
+    order: 3;
+    margin-top: 55px;
+    margin-bottom: 24px;
+  }
+
+  /* 4. リンクカード */
+  .contact-other-links {
+    order: 4;
+    width: 100%;
+    display: block;
+  }
+
+  .contact-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .contact-link-card {
+    min-height: 110px;
+  }
+
+  .contact-mail-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+}
+  .contact-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .contact-label,
+  .contact-links-label {
+    margin-bottom: 24px;
+  }
+
+  .contact-main,
+  .contact-other-links {
+    width: 100%;
+    display: block;
+  }
+
+  .contact-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .contact-link-card {
+    min-height: 110px;
+  }
+
+  .contact-mail-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
