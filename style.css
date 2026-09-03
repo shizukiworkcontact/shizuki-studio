@@ -1046,6 +1046,376 @@ body {
 }
 
 /* =========================
+   ARTICLES
+========================= */
+
+.articles-page {
+  min-height: 100vh;
+  background: var(--snow-white);
+}
+
+.articles-hero {
+  padding: 110px 10% 80px;
+}
+
+.articles-label {
+  margin: 0 0 32px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  color: #8aaebe;
+}
+
+.articles-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.5;
+  color: var(--shizuki-gray);
+}
+
+.articles-description {
+  max-width: 650px;
+  margin: 30px 0 0;
+  font-size: 16px;
+  line-height: 2;
+  color: rgba(89, 103, 117, .68);
+}
+
+
+/* 記事一覧 */
+
+.articles-list {
+  padding: 0 10% 120px;
+}
+
+.article-card {
+  display: block;
+  max-width: 850px;
+  padding: 38px 42px;
+  border: 1px solid rgba(138, 174, 190, .3);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .65);
+  box-shadow: 0 14px 35px rgba(89, 103, 117, .06);
+  color: var(--shizuki-gray);
+  text-decoration: none;
+  transition: .25s;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(138, 174, 190, .6);
+  box-shadow: 0 20px 45px rgba(89, 103, 117, .1);
+}
+
+.article-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #8aaebe;
+}
+
+.article-card h2 {
+  margin: 0;
+  font-size: clamp(23px, 3vw, 30px);
+  line-height: 1.6;
+  color: var(--shizuki-gray);
+}
+
+.article-card p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(89, 103, 117, .68);
+}
+
+.article-read {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: #8aaebe;
+}
+
+/* =========================
+   ARTICLE PAGE
+========================= */
+
+.article-page {
+  min-height: 100vh;
+  background: var(--snow-white);
+}
+
+.article {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 110px 7% 120px;
+}
+
+.article-header {
+  padding-bottom: 55px;
+  border-bottom: 1px solid rgba(138, 174, 190, .28);
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #8aaebe;
+}
+
+.article-header h1 {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 50px);
+  line-height: 1.55;
+  color: var(--shizuki-gray);
+}
+
+.article-lead {
+  max-width: 720px;
+  margin: 30px 0 0;
+  font-size: 16px;
+  line-height: 2;
+  color: rgba(89, 103, 117, .72);
+}
+
+
+/* 本文 */
+
+.article-body {
+  max-width: 760px;
+  margin: 70px auto 0;
+}
+
+.article-body h2 {
+  margin: 70px 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(138, 174, 190, .28);
+  font-size: 28px;
+  line-height: 1.6;
+  color: var(--shizuki-gray);
+}
+
+.article-body h2:first-child {
+  margin-top: 0;
+}
+
+.article-body h3 {
+  margin: 42px 0 18px;
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--shizuki-gray);
+}
+
+.article-body p {
+  margin: 0 0 26px;
+  font-size: 16px;
+  line-height: 2.1;
+  color: rgba(89, 103, 117, .78);
+}
+
+.article-body ul,
+.article-body ol {
+  margin: 24px 0 32px;
+  padding-left: 1.5em;
+}
+
+.article-body li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(89, 103, 117, .78);
+}
+
+.article-body a {
+  color: #8aaebe;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
+/* 商品導線 */
+
+.article-product {
+  max-width: 760px;
+  margin: 90px auto 0;
+  padding: 42px;
+  border: 1px solid rgba(138, 174, 190, .32);
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(181, 217, 232, .24),
+      transparent 36%
+    ),
+    rgba(255, 255, 255, .66);
+  box-shadow: 0 16px 38px rgba(89, 103, 117, .06);
+}
+
+.article-product-label {
+  margin: 0 0 18px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  color: #8aaebe;
+}
+
+.article-product h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.6;
+  color: var(--shizuki-gray);
+}
+
+.article-product > p:not(.article-product-label) {
+  max-width: 600px;
+  margin: 22px 0 28px;
+  font-size: 15px;
+  line-height: 2;
+  color: rgba(89, 103, 117, .72);
+}
+
+
+/* 記事一覧へ */
+
+.article-back {
+  max-width: 760px;
+  margin: 55px auto 0;
+}
+
+.article-back a {
+  font-size: 13px;
+  color: #8aaebe;
+  text-decoration: none;
+}
+
+.article-back a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =========================
+   HOME ARTICLES
+========================= */
+
+.home-articles {
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(181, 217, 232, .18),
+      transparent 32%
+    ),
+    var(--snow-white);
+}
+
+.home-articles-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.home-articles-label {
+  margin: 0 0 32px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  color: #8aaebe;
+}
+
+.home-articles-heading h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.5;
+  color: var(--shizuki-gray);
+}
+
+.articles-all-link {
+  flex-shrink: 0;
+  padding-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8aaebe;
+  text-decoration: none;
+}
+
+.articles-all-link span {
+  display: inline-block;
+  margin-left: 6px;
+  transition: .2s;
+}
+
+.articles-all-link:hover span {
+  transform: translateX(4px);
+}
+
+
+/* 記事カード */
+
+.home-article-list {
+  max-width: 850px;
+}
+
+.home-article-card {
+  display: block;
+  padding: 38px 42px;
+  border: 1px solid rgba(138, 174, 190, .3);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .62);
+  box-shadow: 0 14px 35px rgba(89, 103, 117, .06);
+  color: var(--shizuki-gray);
+  text-decoration: none;
+  transition: .25s;
+}
+
+.home-article-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(138, 174, 190, .6);
+  box-shadow: 0 20px 45px rgba(89, 103, 117, .1);
+}
+
+.home-article-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #8aaebe;
+}
+
+.home-article-card h3 {
+  margin: 0;
+  font-size: clamp(23px, 3vw, 30px);
+  line-height: 1.6;
+  color: var(--shizuki-gray);
+}
+
+.home-article-card p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 2;
+  color: rgba(89, 103, 117, .68);
+}
+
+.home-article-read {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8aaebe;
+}
+
+/* =========================
    Smartphone
 ========================= */
 
@@ -1177,6 +1547,109 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+    /* ARTICLES */
+
+  .articles-hero {
+    padding: 70px 7% 55px;
+  }
+
+  .articles-hero h1 {
+    font-size: 32px;
+  }
+
+  .articles-description br {
+    display: none;
+  }
+
+  .articles-list {
+    padding: 0 7% 90px;
+  }
+
+  .article-card {
+    padding: 28px 24px;
+    border-radius: 18px;
+  }
+
+  .article-card h2 br {
+    display: none;
+  }
+
+    /* ARTICLE PAGE */
+
+  .article {
+    padding: 70px 7% 90px;
+  }
+
+  .article-header {
+    padding-bottom: 42px;
+  }
+
+  .article-header h1 {
+    font-size: 31px;
+  }
+
+  .article-header h1 br {
+    display: none;
+  }
+
+  .article-lead {
+    font-size: 15px;
+  }
+
+  .article-body {
+    margin-top: 50px;
+  }
+
+  .article-body h2 {
+    margin-top: 55px;
+    font-size: 23px;
+  }
+
+  .article-body h3 {
+    font-size: 19px;
+  }
+
+  .article-body p,
+  .article-body li {
+    font-size: 15px;
+  }
+
+  .article-product {
+    margin-top: 65px;
+    padding: 30px 24px;
+    border-radius: 18px;
+  }
+
+  .article-product h2 {
+    font-size: 23px;
+  }
+
+    /* HOME ARTICLES */
+
+  .home-articles-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+
+  .home-articles-label {
+    margin-bottom: 24px;
+  }
+
+  .articles-all-link {
+    padding-bottom: 0;
+  }
+
+  .home-article-card {
+    padding: 28px 24px;
+    border-radius: 18px;
+  }
+
+  .home-article-card h3 br {
+    display: none;
   }
 
 }
