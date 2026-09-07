@@ -137,28 +137,13 @@
 <script>
   const now = new Date();
 
-  const articles = document.querySelectorAll("[data-publish]");
-  let visibleArticles = 0;
-
-  articles.forEach((item) => {
+  document.querySelectorAll("[data-publish]").forEach((item) => {
     const publishDate = new Date(item.dataset.publish);
 
     if (publishDate > now) {
-      item.style.display = "none";
-    } else {
-      visibleArticles++;
+      item.hidden = true;
     }
   });
-
-  const articlesList = document.getElementById("articles-list");
-
-  if (articlesList && visibleArticles === 0) {
-    articlesList.innerHTML = `
-      <p class="articles-empty">
-        次の記事を準備中です。
-      </p>
-    `;
-  }
 </script>
 </body>
 </html>

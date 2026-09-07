@@ -1625,6 +1625,39 @@ body {
   font-size: .9em;
 }
 
+/* トップページ Articles レイアウト修正 */
+#articles .home-articles-heading {
+  display: block !important;
+  margin-bottom: 55px;
+}
+
+#articles .home-articles-label {
+  display: block;
+  margin: 0 0 32px;
+}
+
+#articles .home-articles-heading h2 {
+  display: block;
+  margin: 0;
+}
+
+#articles .home-articles-intro {
+  display: block;
+  max-width: 650px;
+  margin: 28px 0 0;
+}
+
+#articles .section-more-link {
+  display: flex;
+  width: 180px;
+  margin-top: 28px;
+}
+
+#articles .home-article-list {
+  display: block;
+  max-width: 850px;
+}
+
 /* =========================
    Smartphone
 ========================= */
