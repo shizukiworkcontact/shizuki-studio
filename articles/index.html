@@ -85,7 +85,7 @@
     </section>
 
 
-    <section class="articles-list">
+    <section class="articles-list" id="articles-list">
 
   <a
   href="html-website-howto.html"
@@ -135,19 +135,30 @@
 
   </footer>
 <script>
-  const today = new Date();
+  const now = new Date();
 
-  document.querySelectorAll(".article-card").forEach((article) => {
-    const publishDate = article.dataset.publish;
+  const articles = document.querySelectorAll("[data-publish]");
+  let visibleArticles = 0;
 
-    if (!publishDate) return;
+  articles.forEach((item) => {
+    const publishDate = new Date(item.dataset.publish);
 
-    const publish = new Date(publishDate);
-
-    if (publish > today) {
-      article.style.display = "none";
+    if (publishDate > now) {
+      item.style.display = "none";
+    } else {
+      visibleArticles++;
     }
   });
+
+  const articlesList = document.getElementById("articles-list");
+
+  if (articlesList && visibleArticles === 0) {
+    articlesList.innerHTML = `
+      <p class="articles-empty">
+        次の記事を準備中です。
+      </p>
+    `;
+  }
 </script>
 </body>
 </html>
