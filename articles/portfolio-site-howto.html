@@ -45,30 +45,6 @@
 </head>
 
 <body>
-<script>
-  const publishDate = new Date("2026-09-13T09:00:00+09:00");
-  const now = new Date();
-
-  if (now < publishDate) {
-    document.body.innerHTML = `
-      <main style="
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 40px;
-        text-align: center;
-        font-family: sans-serif;
-      ">
-        <div>
-          <p style="font-size: 14px;">COMING SOON</p>
-          <h1>この記事はまだ公開されていません。</h1>
-          <p>公開予定：2026年9月13日 9:00</p>
-          <p><a href="index.html">記事一覧へ戻る</a></p>
-        </div>
-      </main>
-    `;
-  }
-</script>
   <!-- HEADER -->
   <header class="header">
 
@@ -653,6 +629,60 @@
     <p class="copyright">© 2026 shizuki-studio</p>
 
   </footer>
+<script>
+  const publishDate = new Date("2026-09-13T09:00:00+09:00");
+  const now = new Date();
+
+  if (now < publishDate) {
+    document.body.innerHTML = `
+      <main style="
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px;
+        text-align: center;
+        font-family: sans-serif;
+      ">
+        <div>
+          <p style="
+            margin-bottom: 16px;
+            font-size: 13px;
+            letter-spacing: .12em;
+            color: #8aaebe;
+          ">
+            COMING SOON
+          </p>
+
+          <h1 style="
+            margin-bottom: 20px;
+            color: #596775;
+          ">
+            この記事はまだ公開されていません。
+          </h1>
+
+          <p style="
+            margin-bottom: 30px;
+            color: rgba(89, 103, 117, .68);
+          ">
+            公開予定：2026年9月13日 9:00
+          </p>
+
+          <p>
+            <a
+              href="index.html"
+              style="
+                color: #8aaebe;
+                text-decoration: none;
+              "
+            >
+              Articlesへ戻る →
+            </a>
+          </p>
+        </div>
+      </main>
+    `;
+  }
+</script>
 
 </body>
 </html>

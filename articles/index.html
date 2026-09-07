@@ -11,34 +11,46 @@
     name="description"
     content="Web制作やデジタルツール、個人での活動に役立つ情報を発信するshizuki-studioの記事一覧です。"
   >
-<meta
-  property="og:title"
-  content="Articles | shizuki-studio"
->
 
-<meta
-  property="og:description"
-  content="Web制作やデジタルツール、個人での活動に役立つ情報を発信するshizuki-studioの記事一覧です。"
->
+  <meta
+    property="og:title"
+    content="Articles | shizuki-studio"
+  >
 
-<meta property="og:type" content="website">
+  <meta
+    property="og:description"
+    content="Web制作やデジタルツール、個人での活動に役立つ情報を発信するshizuki-studioの記事一覧です。"
+  >
 
-<meta
-  property="og:url"
-  content="https://shizuki-studio.netlify.app/articles/"
->
+  <meta property="og:type" content="website">
 
-<meta
-  property="og:image"
-  content="https://shizuki-studio.netlify.app/images/ogp.png"
->
+  <meta
+    property="og:url"
+    content="https://shizuki-studio.netlify.app/articles/"
+  >
 
-<meta property="og:site_name" content="shizuki-studio">
+  <meta
+    property="og:image"
+    content="https://shizuki-studio.netlify.app/images/ogp.png"
+  >
 
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="shizuki-studio">
+
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="../style.css">
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-  <link rel="canonical" href="https://shizuki-studio.netlify.app/articles/">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="../images/favicon.png"
+  >
+
+  <link
+    rel="canonical"
+    href="https://shizuki-studio.netlify.app/articles/"
+  >
+
 </head>
 
 <body>
@@ -47,20 +59,26 @@
   <header class="header">
 
     <a href="../index.html" class="logo">
-      <img src="../images/studio-icon.png" alt="" class="logo-icon">
+
+      <img
+        src="../images/studio-icon.png"
+        alt=""
+        class="logo-icon"
+      >
 
       <div class="logo-text">
         <span class="logo-main">shizuki-studio</span>
         <span class="logo-sub">DIGITAL PRODUCT STUDIO</span>
       </div>
+
     </a>
 
-   <nav class="nav">
-  <a href="../index.html#products">Products</a>
-  <a href="../index.html#about">About</a>
-  <a href="index.html">Articles</a>
-  <a href="../index.html#contact" class="nav-contact">Contact</a>
-</nav>
+    <nav class="nav">
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#about">About</a>
+      <a href="index.html">Articles</a>
+      <a href="../index.html#contact" class="nav-contact">Contact</a>
+    </nav>
 
   </header>
 
@@ -85,36 +103,36 @@
     </section>
 
 
-    <section class="articles-list" id="articles-list">
+    <section class="articles-list">
 
-  <a
-  href="html-website-howto.html"
-  class="article-card"
-  data-publish="2026-09-13T09:00:00+09:00"
->
+      <a
+        href="portfolio-site-howto.html"
+        class="article-card"
+        data-publish="2026-09-13T09:00:00+09:00"
+      >
 
-    <div class="article-card-meta">
-      <span>WEB</span>
-      <time datetime="2026-09-13">2026.09.13</time>
-    </div>
+        <div class="article-card-meta">
+          <span>WEB</span>
+          <time datetime="2026-09-13">2026.09.13</time>
+        </div>
 
-    <h2>
-      個人で活動する人のための<br>
-      ポートフォリオサイトの作り方
-    </h2>
+        <h2>
+          個人で活動する人のための<br>
+          ポートフォリオサイトの作り方
+        </h2>
 
-    <p>
-      ポートフォリオサイトに載せたい内容やページ構成、
-      HTML・CSSでの制作から無料で公開するまでの流れを紹介します。
-    </p>
+        <p>
+          ポートフォリオサイトに載せたい内容やページ構成、
+          HTML・CSSでの制作から無料で公開するまでの流れを紹介します。
+        </p>
 
-    <span class="article-read">
-      Read Article →
-    </span>
+        <span class="article-read">
+          Read Article →
+        </span>
 
-  </a>
+      </a>
 
-</section>
+    </section>
 
   </main>
 
@@ -123,27 +141,40 @@
   <footer class="footer">
 
     <div class="footer-brand">
-      <img src="../images/studio-icon.png" alt="" class="footer-logo-icon">
+
+      <img
+        src="../images/studio-icon.png"
+        alt=""
+        class="footer-logo-icon"
+      >
 
       <div class="footer-logo-text">
         <span class="footer-logo-main">shizuki-studio</span>
         <span class="footer-logo-sub">DIGITAL PRODUCT STUDIO</span>
       </div>
+
     </div>
 
-    <p class="copyright">© 2026 shizuki-studio</p>
+    <p class="copyright">
+      © 2026 shizuki-studio
+    </p>
 
   </footer>
-<script>
-  const now = new Date();
 
-  document.querySelectorAll("[data-publish]").forEach((item) => {
-    const publishDate = new Date(item.dataset.publish);
 
-    if (publishDate > now) {
-      item.hidden = true;
-    }
-  });
-</script>
+  <!-- 予約公開 -->
+  <script>
+    const now = new Date();
+
+    document.querySelectorAll("[data-publish]").forEach((item) => {
+      const publishDate = new Date(item.dataset.publish);
+
+      if (publishDate > now) {
+        item.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
+
 </html>
