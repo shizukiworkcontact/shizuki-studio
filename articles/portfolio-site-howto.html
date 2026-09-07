@@ -45,7 +45,30 @@
 </head>
 
 <body>
+<script>
+  const publishDate = new Date("2026-09-07T17:00:00+09:00");
+  const now = new Date();
 
+  if (now < publishDate) {
+    document.body.innerHTML = `
+      <main style="
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px;
+        text-align: center;
+        font-family: sans-serif;
+      ">
+        <div>
+          <p style="font-size: 14px;">COMING SOON</p>
+          <h1>この記事はまだ公開されていません。</h1>
+          <p>公開予定：2026年9月13日 9:00</p>
+          <p><a href="index.html">記事一覧へ戻る</a></p>
+        </div>
+      </main>
+    `;
+  }
+</script>
   <!-- HEADER -->
   <header class="header">
 
@@ -93,14 +116,59 @@
           この記事では、初めてポートフォリオサイトを作る人に向けて、
           必要な内容や作り方を順番に紹介します。
         </p>
+<div class="article-summary">
 
+  <p class="article-summary-title">
+    この記事でわかること
+  </p>
+
+  <ul>
+    <li>
+      <a href="#what-is-portfolio">
+        ポートフォリオサイトとは？
+      </a>
+    </li>
+
+    <li>
+      <a href="#portfolio-content">
+        ポートフォリオサイトに載せたい内容
+      </a>
+    </li>
+
+    <li>
+      <a href="#portfolio-structure">
+        ポートフォリオサイトの構成例
+      </a>
+    </li>
+
+    <li>
+      <a href="#portfolio-steps">
+        ポートフォリオサイトを作る手順
+      </a>
+    </li>
+
+    <li>
+      <a href="#portfolio-checklist">
+        ポートフォリオサイト公開前のチェックリスト
+      </a>
+    </li>
+
+    <li>
+      <a href="#portfolio-template">
+        自分で作るのが難しいときは
+      </a>
+    </li>
+  </ul>
+
+</div>
       </header>
 
 
       <!-- 記事本文 -->
       <div class="article-body">
 
-        <h2>ポートフォリオサイトとは？</h2>
+        <h2 id="what-is-portfolio">ポートフォリオサイトとは？</h2>
+
 
 <p>
   ポートフォリオサイトとは、自分の作品や実績、プロフィールなどを
@@ -140,7 +208,7 @@
 </p>
 
 
-        <h2>ポートフォリオサイトに載せたい内容</h2>
+        <h2 id="portfolio-content">ポートフォリオサイトに載せたい内容</h2>
 
 <p>
   ポートフォリオサイトを作ろうと思っても、
@@ -226,8 +294,75 @@
   コピーできるようにアドレス自体も表示しておくと便利です。
 </p>
 
+<h2 id="portfolio-structure">ポートフォリオサイトの構成例</h2>
 
-       <h2>ポートフォリオサイトを作る手順</h2>
+<p>
+  掲載したい内容が決まったら、
+  次はそれぞれの情報をどのような順番で見せるか考えてみましょう。
+</p>
+
+<p>
+  初めてポートフォリオサイトを作る場合は、
+  すべての情報を1ページにまとめたシンプルな構成でも十分です。
+</p>
+
+<p>
+  このとき、最初にプロフィールを詳しく紹介するよりも、
+  作品や実績、活動内容を先に見せる構成がおすすめです。
+</p>
+
+<div class="article-example">
+
+  <p class="article-example-title">
+    シンプルなポートフォリオサイトの例
+  </p>
+
+  <div class="article-example-flow">
+    <span>TOP</span>
+    <span>↓</span>
+    <span>作品・実績</span>
+    <span>↓</span>
+    <span>サービス・活動内容</span>
+    <span>↓</span>
+    <span>プロフィール</span>
+    <span>↓</span>
+    <span>SNS・ショップ</span>
+    <span>↓</span>
+    <span>お問い合わせ</span>
+  </div>
+
+</div>
+
+<p>
+  初めてサイトを訪れた人は、
+  まだ自分自身について詳しく知っているとは限りません。
+  そこで最初に作品や実績を見せることで、
+  「何を作っている人なのか」「どんな活動をしているのか」を
+  すぐに伝えやすくなります。
+</p>
+
+<p>
+  作品や活動に興味を持ってもらえたら、
+  そのあとにプロフィールを見てもらうことで、
+  制作者自身についても知ってもらうことができます。
+</p>
+
+<p>
+  ただし、最適な順番はポートフォリオの目的によって変わります。
+  自分自身の経歴や専門性が重要な仕事であれば、
+  プロフィールを早い段階に置く方法もあります。
+  「サイトを訪れた人に、まず何を知ってほしいか」を考えて
+  順番を決めるのがおすすめです。
+</p>
+
+<p>
+  作品数や情報量が増えてきたら、
+  WorksやProfileなどを別ページに分けても構いません。
+  まずは今ある情報をわかりやすく見せることを優先して、
+  必要になったときにページを増やしていきましょう。
+</p>
+       
+<h2 id="portfolio-steps">ポートフォリオサイトを作る手順</h2>
 
 <p>
   ポートフォリオサイトは、HTMLやCSSを使って自分で作ることもできます。
@@ -285,23 +420,35 @@
 </p>
 
 <p>
-  コードを書くときは、
-  Visual Studio Code（VS Code）のような
+  コードを書くときは、Visual Studio Code（VS Code）のような
   コードエディターを使うと編集しやすくなります。
 </p>
 
-
-<h3>4. ブラウザで表示を確認する</h3>
-
 <p>
   HTMLやCSSを編集したら、
-  ブラウザで実際のページを開いて表示を確認します。
+  ブラウザで実際のページを開いて表示を確認しましょう。
+  コードを編集しながらこまめに確認することで、
+  レイアウトの崩れや表示の違いにも気づきやすくなります。
+</p>
+
+
+<h3>4. スマートフォン用の表示を整えて確認する</h3>
+
+<p>
+  パソコン用のページができたら、
+  スマートフォンでも見やすく表示されるようにCSSを調整します。
 </p>
 
 <p>
-  パソコンだけでなく、スマートフォンでも確認して、
+  画面幅に合わせてレイアウトや文字サイズなどを変更する
+  メディアクエリを追加することで、
+  パソコンとスマートフォンそれぞれに合った表示にすることができます。
+</p>
+
+<p>
+  CSSを調整したら、ブラウザで実際のページを開いて、
   文字が小さすぎないか、レイアウトが崩れていないか、
-  リンクが正しく動くかなどをチェックしておきましょう。
+  リンクやボタンが正しく動くかなどを確認しておきましょう。
 </p>
 
 
@@ -356,8 +503,48 @@
   まず公開して、必要に応じて育てていくのがおすすめです。
 </p>
 
+<h2 id="portfolio-checklist">ポートフォリオサイト公開前のチェックリスト</h2>
 
-        <h2>自分で作るのが難しいときは</h2>
+<p>
+  サイトが完成したら、公開する前に一度全体を確認してみましょう。
+  デザインだけでなく、実際にサイトを訪れた人が
+  問題なく使えるかを確認することも大切です。
+</p>
+
+<div class="article-checklist">
+
+  <p class="article-checklist-title">
+    公開前に確認したいこと
+  </p>
+
+  <ul>
+    <li>パソコンとスマートフォンの両方で表示を確認した</li>
+    <li>文字や画像が画面からはみ出していない</li>
+    <li>作品やプロフィールなど、必要な情報が掲載されている</li>
+    <li>画像が正しく表示されている</li>
+    <li>メニューやボタンのリンクが正しく動く</li>
+    <li>SNSやショップへのリンクが正しい</li>
+    <li>お問い合わせ方法がわかりやすく掲載されている</li>
+    <li>ページごとにわかりやすいタイトルを設定している</li>
+    <li>ページの内容を説明するdescriptionを設定している</li>
+  </ul>
+
+</div>
+
+<p>
+  特にスマートフォンでの表示は忘れずに確認しておきましょう。
+  パソコンではきれいに表示されていても、
+  画面幅が変わることでレイアウトが崩れることがあります。
+</p>
+
+<p>
+  また、公開したあとに修正しても問題ありません。
+  実際のサイトを使いながら気づいたところを直し、
+  少しずつ使いやすいポートフォリオサイトにしていきましょう。
+</p>
+
+        
+<h2 id="portfolio-template">自分で作るのが難しいときは</h2>
 
 <p>
   ポートフォリオサイトは自分で作ることもできますが、
@@ -404,28 +591,41 @@
       <!-- 商品導線 -->
       <aside class="article-product">
 
-        <p class="article-product-label">PORTFOLIO TEMPLATE</p>
+  <div class="article-product-content">
 
-        <h2>
-          すぐに使える<br>
-          ポートフォリオテンプレート
-        </h2>
+    <p class="article-product-label">
+      PORTFOLIO TEMPLATE
+    </p>
 
-        <p>
-          shizuki-studioでは、HTMLとCSSを編集して使える
-          シンプルなポートフォリオサイトのテンプレートを販売しています。
-        </p>
+    <h2>
+      すぐに使える<br>
+      ポートフォリオテンプレート
+    </h2>
 
-        <a
-          href="https://shizuki-studio.booth.pm/items/8751640"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button"
-        >
-          商品を見る
-        </a>
+    <p>
+      shizuki-studioでは、HTMLとCSSを編集して使える
+      シンプルなポートフォリオサイトのテンプレートを販売しています。
+    </p>
 
-      </aside>
+    <a
+      href="https://shizuki-studio.booth.pm/items/8751640"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button"
+    >
+      商品を見る
+    </a>
+
+  </div>
+
+  <div class="article-product-image">
+    <img
+      src="../images/portfolio-template.png"
+      alt="shizuki-studio ポートフォリオテンプレート"
+    >
+  </div>
+
+</aside>
 
 
       <!-- 記事一覧へ -->

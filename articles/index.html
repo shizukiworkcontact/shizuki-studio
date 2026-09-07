@@ -87,7 +87,11 @@
 
     <section class="articles-list">
 
-      <a href="portfolio-site-howto.html" class="article-card">
+      <a
+  href="portfolio-site-howto.html"
+  class="article-card"
+  data-publish="2026-09-07T17:00:00+09:00"
+>
 
         <div class="article-card-meta">
           <span>WEB</span>
@@ -131,6 +135,20 @@
     <p class="copyright">© 2026 shizuki-studio</p>
 
   </footer>
+<script>
+  const today = new Date();
 
+  document.querySelectorAll(".article-card").forEach((article) => {
+    const publishDate = article.dataset.publish;
+
+    if (!publishDate) return;
+
+    const publish = new Date(publishDate);
+
+    if (publish > today) {
+      article.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
