@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EPRZ24CBJJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EPRZ24CBJJ');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Articles | shizuki-studio</title>
+  <!-- SEO -->
+  <title>shizuki-studio｜暮らしと仕事を整えるデジタルツール</title>
 
   <meta
     name="description"
-    content="Web制作やデジタルツール、個人での活動に役立つ情報を発信するshizuki-studioの記事一覧です。"
+    content="shizuki-studioは、暮らしや仕事を少し便利にするデジタルツールを制作・販売する個人スタジオです。PCツールやWebテンプレートなどを制作しています。"
   >
 
-  <meta
-    property="og:title"
-    content="Articles | shizuki-studio"
-  >
+  <!-- OGP -->
+  <meta property="og:title" content="shizuki-studio | Digital Product Studio">
 
   <meta
     property="og:description"
-    content="Web制作やデジタルツール、個人での活動に役立つ情報を発信するshizuki-studioの記事一覧です。"
+    content="シンプルな使いやすさとデザインを大切に、日々に馴染むデジタルプロダクトをつくる小さなスタジオです。"
   >
 
   <meta property="og:type" content="website">
 
   <meta
     property="og:url"
-    content="https://shizuki-studio.netlify.app/articles/"
+    content="https://shizuki-studio.netlify.app/"
   >
 
   <meta
@@ -38,30 +45,26 @@
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="../style.css">
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="../images/favicon.png"
-  >
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-  <link
-    rel="canonical"
-    href="https://shizuki-studio.netlify.app/articles/"
-  >
+  <link rel="canonical" href="https://shizuki-studio.netlify.app/">
+
+  <!-- Google Search Console -->
+  <!-- ここに現在のgoogle-site-verificationを残す -->
 
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header class="header">
 
-    <a href="../index.html" class="logo">
-
+    <a href="#" class="logo">
       <img
-        src="../images/studio-icon.png"
+        src="images/studio-icon.png"
         alt=""
         class="logo-icon"
       >
@@ -70,92 +73,367 @@
         <span class="logo-main">shizuki-studio</span>
         <span class="logo-sub">DIGITAL PRODUCT STUDIO</span>
       </div>
-
     </a>
 
     <nav class="nav">
-      <a href="../index.html#products">Products</a>
-      <a href="../index.html#about">About</a>
-      <a href="index.html">Articles</a>
-      <a href="../index.html#contact" class="nav-contact">Contact</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#articles">Articles</a>
+      <a href="#contact" class="nav-contact">Contact</a>
     </nav>
 
   </header>
 
 
-  <!-- ARTICLES -->
-  <main class="articles-page">
+  <main>
 
-    <section class="articles-hero">
+    <!-- HERO -->
+    <section class="hero">
 
-      <p class="articles-label">ARTICLES</p>
+      <div class="hero-visual">
+        <img
+          src="images/portfolio-mockup.png"
+          alt="WebポートフォリオテンプレートのPC表示イメージ"
+          class="hero-product-image"
+        >
+      </div>
 
-      <h1>
-        つくること、働くことを、<br>
-        少しわかりやすく。
-      </h1>
+      <div class="hero-content">
 
-      <p class="articles-description">
-        Web制作やデジタルツール、個人で活動するためのヒントなど、<br>
-        shizuki-studioの制作にまつわる情報をまとめています。
-      </p>
+        <p class="hero-label">
+          DIGITAL PRODUCT STUDIO
+        </p>
+
+        <h1>
+          使いやすさを、<br>
+          心地よいかたちに。
+        </h1>
+
+        <p class="hero-text">
+          shizuki-studioは、シンプルな使いやすさとデザインを大切に、
+          PCツールやWebテンプレートなど、
+          日々の暮らしや仕事に馴染むデジタルプロダクトを制作する小さなスタジオです。
+        </p>
+
+        <a href="#products" class="button">
+          Productsを見る
+        </a>
+
+      </div>
 
     </section>
 
 
-    <section class="articles-list">
+    <!-- PRODUCTS -->
+    <section id="products" class="section products">
 
-      <a
-        href="portfolio-site-howto.html"
-        class="article-card"
-        data-publish="2026-09-13T09:00:00+09:00"
-      >
+      <div class="products-heading">
 
-        <div class="article-card-meta">
-          <span>WEB</span>
-          <time datetime="2026-09-13">2026.09.13</time>
-        </div>
+        <p class="products-label">PRODUCTS</p>
 
         <h2>
-          個人で活動する人のための<br>
-          ポートフォリオサイトの作り方
+          暮らしや仕事に役立つ、<br>
+          デジタルアイテムを。
         </h2>
 
-        <p>
-          ポートフォリオサイトに載せたい内容やページ構成、
-          HTML・CSSでの制作から無料で公開するまでの流れを紹介します。
+        <p class="products-intro">
+          Webサイトやデスクトップツール、デザインアイテムなど、<br>
+          使いやすさとデザインを大切にしたデジタル商品を制作しています。
         </p>
 
-        <span class="article-read">
-          Read Article →
-        </span>
+        <a
+          href="https://shizuki-studio.booth.pm/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="about-profile-link section-more-link"
+        >
+          <span>All Products</span>
+          <span>→</span>
+        </a>
 
-      </a>
+      </div>
 
-<a
-  href="html-css-website-howto.html"
-  class="article-card"
-  data-publish="2026-09-20T09:00:00+09:00"
->
-  <div class="article-card-meta">
-    <span>WEB</span>
-    <time datetime="2026-09-20">2026.09.20</time>
+      <div class="product-grid">
+
+        <article class="product-card">
+
+          <div class="product-image">
+            <img
+              src="images/portfolio-template.png"
+              alt="shizuki-studio Webポートフォリオテンプレート"
+            >
+          </div>
+
+          <p class="product-category">WEB TEMPLATE</p>
+          <h3>Portfolio Template</h3>
+
+          <p>
+            自分の作品や活動をまとめられる、
+            シンプルなWebポートフォリオテンプレート。
+          </p>
+
+          <a
+            href="https://shizuki-studio.booth.pm/items/8751640"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-link"
+          >
+            View Product <span>→</span>
+          </a>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image"></div>
+
+          <p class="product-category">DESKTOP TOOL</p>
+          <h3>Mini Work Timer</h3>
+
+          <p>
+            PC画面の片隅に常時表示できる、
+            作業時間を記録・管理する小さなデスクトップタイマー。
+          </p>
+
+          <span class="coming-soon">
+            Coming Soon
+          </span>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about-section">
+
+      <div class="about-left">
+
+        <p class="about-label">ABOUT</p>
+
+        <div class="about-profile">
+
+          <img
+            src="images/studio-icon.png"
+            alt=""
+            class="about-profile-icon"
+          >
+
+          <a href="profile.html" class="about-profile-link">
+            <span>Profile</span>
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="about-content">
+
+        <h2>
+          つくりたいものを、<br>
+          ひとつずつ。
+        </h2>
+
+        <p class="about-main">
+          shizuki-studioは、<br>
+          「こんなものがあったらいいな」から生まれたものを
+          形にする、小さなデジタルプロダクトスタジオです。
+        </p>
+
+        <p class="about-text">
+          Webサイトやデスクトップツール、デザインアイテムなど、
+          ジャンルにとらわれず、自分自身が使いたいと思えるものを
+          企画・制作しています。
+        </p>
+
+        <div class="about-tags">
+          <span>Web</span>
+          <span>Tools</span>
+          <span>Design</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ARTICLES -->
+<section id="articles" class="section home-articles">
+
+  <div class="home-articles-heading">
+
+    <p class="home-articles-label">ARTICLES</p>
+
+    <h2>
+      つくること、働くことを、<br>
+      少しわかりやすく。
+    </h2>
+
+    <p class="home-articles-intro">
+      Web制作やデジタルツール、個人で活動するためのヒントなど、<br>
+      shizuki-studioの制作にまつわる情報をまとめています。
+    </p>
+
+    <a
+      href="articles/index.html"
+      class="about-profile-link section-more-link"
+    >
+      <span>All Articles</span>
+      <span>→</span>
+    </a>
+
   </div>
 
-  <h2>
-    初心者向け｜HTML・CSSで<br>
-    Webサイトを作る方法【その１：HTML編】
-  </h2>
 
-  <p>
-    VS Codeを使ってHTMLでWebサイトを作る方法を、
-    ポートフォリオサイトの制作を通して解説します。
-  </p>
+  <div class="home-article-list">
 
-  <span class="article-read">
-    Read Article →
-  </span>
-</a>
+    <a
+      href="articles/portfolio-site-howto.html"
+      class="home-article-card"
+      data-publish="2026-09-13T09:00:00+09:00"
+    >
+
+      <div class="home-article-meta">
+        <span>WEB</span>
+        <time datetime="2026-09-13">2026.09.13</time>
+      </div>
+
+      <h3>
+        個人で活動する人のための<br>
+        ポートフォリオサイトの作り方
+      </h3>
+
+      <p>
+        ポートフォリオサイトに載せたい内容やページ構成、
+        HTML・CSSでの制作から無料で公開するまでの流れを紹介します。
+      </p>
+
+      <span class="home-article-read">
+        Read Article →
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+
+      <div class="contact-grid">
+
+        <p class="contact-label">CONTACT</p>
+        <p class="contact-links-label">LINKS</p>
+
+
+        <div class="contact-main">
+
+          <h2>
+            お問い合わせはこちらから。
+          </h2>
+
+          <p class="contact-text">
+            商品についてのご質問や、shizuki-studioへのお問い合わせは<br>
+            メールからお気軽にご連絡ください。
+          </p>
+
+          <div class="contact-mail-wrap">
+
+            <a
+              href="mailto:shizukiwork.contact@gmail.com"
+              class="contact-mail-button"
+            >
+              Mail
+              <span>→</span>
+            </a>
+
+            <span class="contact-mail-address">
+              shizukiwork.contact@gmail.com
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-other-links">
+
+          <div class="contact-link-grid">
+
+            <a
+              href="https://shizuki-studio.booth.pm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-card"
+            >
+              <img
+                src="images/icons/booth.png"
+                alt=""
+                class="contact-link-icon"
+              >
+              <span class="contact-link-name">BOOTH</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/shizukistudio?igsi=MWpib3Rib2U5c215Mw%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-card"
+            >
+              <img
+                src="images/icons/instagram.png"
+                alt=""
+                class="contact-link-icon"
+              >
+              <span class="contact-link-name">Instagram</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+
+
+            <a
+              href="https://pin.it/5NpzwEd6U"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link-card"
+            >
+              <img
+                src="images/icons/pinterest.png"
+                alt=""
+                class="contact-link-icon"
+              >
+              <span class="contact-link-name">Pinterest</span>
+              <span class="contact-link-arrow">↗</span>
+            </a>
+
+
+            <a
+              href="profile.html"
+              class="contact-link-card"
+            >
+              <img
+                src="images/studio-icon.png"
+                alt=""
+                class="contact-link-icon profile-card-icon"
+              >
+              <span class="contact-link-name">Profile</span>
+              <span class="contact-link-arrow">→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
   </main>
@@ -167,7 +445,7 @@
     <div class="footer-brand">
 
       <img
-        src="../images/studio-icon.png"
+        src="images/studio-icon.png"
         alt=""
         class="footer-logo-icon"
       >
@@ -188,17 +466,16 @@
 
   <!-- 予約公開 -->
   <script>
-    const now = new Date();
+  const now = new Date();
 
-    document.querySelectorAll("[data-publish]").forEach((item) => {
-      const publishDate = new Date(item.dataset.publish);
+  document.querySelectorAll("[data-publish]").forEach((item) => {
+    const publishDate = new Date(item.dataset.publish);
 
-      if (publishDate > now) {
-        item.style.display = "none";
-      }
-    });
-  </script>
+    if (publishDate > now) {
+      item.style.display = "none";
+    }
+  });
+</script>
 
 </body>
-
 </html>
