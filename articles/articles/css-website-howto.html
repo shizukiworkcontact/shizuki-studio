@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>初心者向け｜CSSでWebサイトをデザインする方法【VS Codeで実践・その2】 | shizuki-studio</title>
+
+  <meta
+    name="description"
+    content="個人で活動するクリエイターや個人事業主に向けて、ポートフォリオサイトの作り方をわかりやすく紹介します。必要な内容やページ構成、公開までの流れをまとめました。"
+  >
+<meta
+  property="og:title"
+  content="個人で活動する人のためのポートフォリオサイトの作り方 | shizuki-studio"
+>
+
+<meta
+  property="og:description"
+  content="個人で活動するクリエイターや個人事業主に向けて、ポートフォリオサイトに必要な内容やページ構成、制作から無料公開までの流れを紹介します。"
+>
+
+<meta property="og:type" content="article">
+
+<meta
+  property="og:url"
+  content="https://shizuki-studio.netlify.app/articles/portfolio-site-howto.html"
+>
+
+<meta
+  property="og:image"
+  content="https://shizuki-studio.netlify.app/images/ogp.png"
+>
+
+<meta property="og:site_name" content="shizuki-studio">
+
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link
+  rel="canonical"
+  href="https://shizuki-studio.netlify.app/articles/portfolio-site-howto.html"
+>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <a href="../index.html" class="logo">
+      <img src="../images/studio-icon.png" alt="" class="logo-icon">
+
+      <div class="logo-text">
+        <span class="logo-main">shizuki-studio</span>
+        <span class="logo-sub">DIGITAL PRODUCT STUDIO</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="../index.html#products">Products</a>
+      <a href="index.html">Articles</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact" class="nav-contact">Contact</a>
+    </nav>
+
+  </header>
+
+
+  <!-- ARTICLE -->
+  <main class="article-page">
+
+    <article class="article">
+
+      <!-- 記事ヘッダー -->
+      <header class="article-header">
+
+  <div class="article-meta">
+    <span>WEB</span>
+    <time datetime="2026-09-03">2026.09.03</time>
+  </div>
+
+  <h1>
+  初心者向け｜CSSで<br>
+  Webサイトをデザインする方法
+</h1>
+
+  <p class="article-lead">
+  HTMLでWebページの内容を作ったら、
+  次はCSSを使ってサイトのデザインを整えていきます。
+  この記事では、その1で作成したポートフォリオサイトにCSSを追加して、
+  文字の大きさや色、余白、レイアウトを調整しながら、
+  Webサイトのデザインを完成させていきます。
+</p>
+
+  <div class="article-summary">
+
+  <p class="article-summary-title">
+    この記事でできること
+  </p>
+
+  <ul>
+    <li>CSSでWebサイトのデザインを整える</li>
+    <li>HeaderやHeroのレイアウトを作る</li>
+    <li>Worksをカード形式で表示する</li>
+    <li>AboutやContactのデザインを整える</li>
+    <li>スマートフォンでも見やすいサイトにする</li>
+  </ul>
+
+</div>
+
+</header>
+
+
+      <!-- 記事本文 -->
+      <div class="article-body">
+
+  <h2 id="sample-site">この記事で作るWebサイト</h2>
+
+  <p>
+    今回は、HTMLとCSSを使って、
+    シンプルな1ページのポートフォリオサイトを作ります。
+  </p>
+
+  <p>
+    制作した作品を紹介する「Works」、
+    自分について紹介する「About」、
+    連絡先を掲載する「Contact」を用意して、
+    個人で活動する人が自分の作品や活動をまとめられるサイトにしていきます。
+  </p>
+<div class="article-screenshot">
+  <img
+    src="../images/sample-portfolio-pc.png"
+    alt="HTMLとCSSで作るポートフォリオサイトの完成イメージ"
+  >
+  <p class="article-image-caption">
+    今回作成するポートフォリオサイト
+  </p>
+</div>
+  <p>
+    サイトの構成は、次のようになります。
+  </p>
+
+  <div class="article-example">
+
+    <p class="article-example-title">
+      今回作るポートフォリオサイト
+    </p>
+
+    <div class="article-example-flow">
+      <span>TOP</span>
+      <span>↓</span>
+      <span>WORKS</span>
+      <span>↓</span>
+      <span>ABOUT</span>
+      <span>↓</span>
+      <span>CONTACT</span>
+    </div>
+
+  </div>
+
+  <p>
+    最初に作品を掲載するWorksを配置することで、
+    サイトを訪れた人に「何を作っている人なのか」を伝え、
+    そのあとにAboutで制作者について知ってもらえる構成にしています。
+  </p>
+
+</div>
+
+<p>
+  初めてサイトを訪れた人は、
+  まだ自分自身について詳しく知っているとは限りません。
+  そこで最初に作品や実績を見せることで、
+  「何を作っている人なのか」「どんな活動をしているのか」を
+  すぐに伝えやすくなります。
+</p>
+
+<p>
+  作品や活動に興味を持ってもらえたら、
+  そのあとにプロフィールを見てもらうことで、
+  制作者自身についても知ってもらうことができます。
+</p>
+
+<p>
+  ただし、最適な順番はポートフォリオの目的によって変わります。
+  自分自身の経歴や専門性が重要な仕事であれば、
+  プロフィールを早い段階に置く方法もあります。
+  「サイトを訪れた人に、まず何を知ってほしいか」を考えて
+  順番を決めるのがおすすめです。
+</p>
+
+<p>
+  作品数や情報量が増えてきたら、
+  WorksやProfileなどを別ページに分けても構いません。
+  まずは今ある情報をわかりやすく見せることを優先して、
+  必要になったときにページを増やしていきましょう。
+</p>
+       
+<h2 id="what-you-need">1. Webサイトを作るために必要なもの</h2>
+
+<p>
+  HTMLとCSSでWebサイトを作るために、
+  特別な機材や有料のソフトは必要ありません。
+</p>
+
+<p>
+  今回は、次の3つを使ってWebサイトを作っていきます。
+</p>
+
+<div class="article-checklist">
+
+  <p class="article-checklist-title">
+    用意するもの
+  </p>
+
+  <ul>
+    <li>パソコン</li>
+    <li>Google ChromeやSafariなどのWebブラウザ</li>
+    <li>Visual Studio Code（VS Code）</li>
+  </ul>
+
+</div>
+
+<p>
+  WebサイトのコードはVS Codeで編集し、
+  作ったページをChromeやSafariなどのブラウザで開いて
+  実際の表示を確認しながら制作していきます。
+</p>
+
+<p>
+  今回使用するHTMLとCSSは、
+  どちらもWebサイトを作るための基本的な技術です。
+  初めてコードを書く方でも進められるように、
+  実際のコードを確認しながらひとつずつ作っていきます。
+</p>
+
+<h2 id="vscode">2. VS Codeを準備する</h2>
+
+<p>
+  Webサイトのコードを書くために、
+  今回はVisual Studio Code（VS Code）というコードエディターを使用します。
+</p>
+
+<h3>VS Codeとは？</h3>
+
+<p>
+  VS Codeは、HTMLやCSSなどのコードを
+  書いたり編集したりするために使えるコードエディターです。
+</p>
+
+<p>
+  無料で利用でき、WindowsやMacに対応しているため、
+  初めてWebサイトを作る方にも使いやすいツールです。
+</p>
+
+<h3>VS Codeをインストールする</h3>
+
+<p>
+  まずはVS Codeの公式サイトから、
+  使用しているパソコンに合ったものをダウンロードします。
+</p>
+
+<p>
+  ダウンロードしたファイルを開き、
+  画面の案内に沿ってインストールを進めましょう。
+</p>
+
+<p>
+  インストールが完了したらVS Codeを起動します。
+  これでWebサイトを作る準備は完了です。
+</p>
+
+<h2 id="create-folder">3. Webサイト用のフォルダを作る</h2>
+
+<p>
+  VS Codeの準備ができたら、
+  Webサイトで使用するファイルをまとめて保存するためのフォルダを作ります。
+</p>
+
+<p>
+  今回は「sample-portfolio」という名前のフォルダを作ってみましょう。
+  デスクトップなど、自分がわかりやすい場所に作成してください。
+</p>
+
+<h3>フォルダをVS Codeで開く</h3>
+
+<p>
+  VS Codeを起動したら、
+  作成した「sample-portfolio」フォルダをVS Codeで開きます。
+</p>
+
+<p>
+  フォルダを開いたら、その中に次のファイルとフォルダを作成します。
+</p>
+
+<div class="article-example">
+
+  <p class="article-example-title">
+    sample-portfolioの中身
+  </p>
+
+  <div class="article-file-tree">
+    <span>sample-portfolio/</span>
+    <span>├── index.html</span>
+    <span>├── style.css</span>
+    <span>└── images/</span>
+  </div>
+
+</div>
+
+<h3>index.html</h3>
+
+<p>
+  Webページの内容や構造を書くためのファイルです。
+  このファイルに見出しや文章、リンクなどを書いていきます。
+</p>
+
+<h3>style.css</h3>
+
+<p>
+  Webページのデザインを設定するためのファイルです。
+  文字の大きさや色、余白、レイアウトなどをここで調整します。
+</p>
+
+<h3>imagesフォルダ</h3>
+
+<p>
+  Webサイトで使用する画像を保存するためのフォルダです。
+  今回のサンプルでは画像を使わなくても制作できますが、
+  自分の作品画像などを追加するときに使用できます。
+</p>
+
+<h2 id="write-html">4. HTMLを書いてWebページを作る</h2>
+
+<p>
+  ファイルの準備ができたら、
+  「index.html」を使ってWebページの内容を作っていきます。
+</p>
+
+<p>
+  HTMLでは、見出しや文章、リンクなどに
+  「タグ」と呼ばれる記号を付けることで、
+  ページの内容や構造をブラウザに伝えます。
+</p>
+
+<p>
+  VS Codeで「index.html」を開いて、
+  次のコードを入力してみましょう。
+</p>
+
+<h3>HTMLの基本部分を書く</h3>
+
+<p>
+  まずは、Webページの土台になるHTMLを書きます。
+  「index.html」に次のコードを入力してください。
+</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+  &lt;title&gt;mio portfolio&lt;/title&gt;
+
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+<p>
+  HTMLでは、基本的に「&lt; &gt;」で囲まれた
+  「タグ」を使ってページの構造を作ります。
+</p>
+
+<p>
+  今回のコードでは、
+  「head」の中にページのタイトルや文字コード、
+  CSSファイルなどの設定を書き、
+  「body」の中に実際にブラウザへ表示する内容を書いていきます。
+</p>
+
+<p>
+  「link」では、先ほど作成した「style.css」を
+  このHTMLから読み込むように設定しています。
+  あとでCSSを書いたときに、ここで設定したファイルのデザインが
+  Webページに反映されます。
+</p>
+
+<p>
+  今の段階ですべてのタグの意味を覚える必要はありません。
+  実際にページを作りながら、
+  少しずつHTMLの構造を確認していきましょう。
+</p>
+
+<h3>HeaderとHeroを作る</h3>
+
+<p>
+  次に、Webページに実際に表示する内容を作っていきます。
+</p>
+
+<p>
+  先ほど作ったHTMLの「&lt;body&gt;」と「&lt;/body&gt;」の間に、
+  次のコードを追加してください。
+</p>
+
+<pre><code>&lt;header class="header"&gt;
+
+  &lt;a href="#" class="logo"&gt;
+    mio
+  &lt;/a&gt;
+
+  &lt;nav class="nav"&gt;
+    &lt;a href="#works"&gt;Works&lt;/a&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+
+&lt;/header&gt;
+
+
+&lt;main&gt;
+
+  &lt;section class="hero"&gt;
+
+    &lt;p class="hero-label"&gt;
+      PORTFOLIO SITE
+    &lt;/p&gt;
+
+    &lt;h1&gt;
+      つくることを、&lt;br&gt;
+      仕事にしています。
+    &lt;/h1&gt;
+
+    &lt;p class="hero-text"&gt;
+      Webデザインを中心に活動する、&lt;br&gt;
+      個人クリエイターのポートフォリオです。
+    &lt;/p&gt;
+
+    &lt;a href="#works" class="button"&gt;
+      View Works ↓
+    &lt;/a&gt;
+
+  &lt;/section&gt;
+
+&lt;/main&gt;</code></pre>
+
+<p>
+  「header」には、サイト名とページ内を移動するための
+  ナビゲーションを配置しています。
+</p>
+
+<p>
+  「main」は、そのページの中心となる内容をまとめるためのタグです。
+  今回はこの中に、Works、About、Contactも順番に追加していきます。
+</p>
+
+<p>
+  最初に表示されるHeroには、
+  サイトを訪れた人に「何をしている人なのか」が伝わるように、
+  簡単な活動内容とWorksへのリンクを配置しています。
+</p>
+
+<h3>Worksを作る</h3>
+
+<p>
+  次に、制作した作品を紹介するWorksを作ります。
+</p>
+
+<p>
+  先ほど作ったHeroの「&lt;/section&gt;」のあと、
+  「&lt;/main&gt;」の前に次のコードを追加してください。
+</p>
+
+<pre><code>&lt;section id="works" class="section works"&gt;
+
+  &lt;p class="section-label"&gt;WORKS&lt;/p&gt;
+
+  &lt;h2&gt;制作したもの&lt;/h2&gt;
+
+  &lt;p class="section-text"&gt;
+    Webサイトやバナーなどを制作しています。
+  &lt;/p&gt;
+
+  &lt;div class="works-grid"&gt;
+
+    &lt;article class="work-card"&gt;
+
+      &lt;div class="work-image"&gt;
+        &lt;span&gt;WORK 01&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;h3&gt;Web Site Design&lt;/h3&gt;
+
+      &lt;p&gt;
+        個人ショップをイメージした
+        Webサイトのデザインです。
+      &lt;/p&gt;
+
+    &lt;/article&gt;
+
+
+    &lt;article class="work-card"&gt;
+
+      &lt;div class="work-image"&gt;
+        &lt;span&gt;WORK 02&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;h3&gt;Banner Design&lt;/h3&gt;
+
+      &lt;p&gt;
+        SNSで使用することを想定した
+        バナーデザインです。
+      &lt;/p&gt;
+
+    &lt;/article&gt;
+
+  &lt;/div&gt;
+
+&lt;/section&gt;</code></pre>
+
+<p>
+  「section」は、ページの内容をテーマごとにまとめるために使用します。
+  今回はWorks全体をひとつのsectionとして作っています。
+</p>
+
+<p>
+  その中にある「article」は、
+  それぞれの作品をひとつのまとまりとして表しています。
+  今回はWebサイトとバナーの2つの作品を用意しました。
+</p>
+
+<p>
+  「id="works"」を設定しているため、
+  Headerの「Works」やHeroの「View Works」をクリックすると、
+  このWorksまで移動できるようになります。
+</p>
+
+<p>
+  今は作品画像の代わりに「WORK 01」「WORK 02」と表示しています。
+  自分のポートフォリオを作るときは、
+  あとから実際の作品画像に変更することもできます。
+</p>
+
+<h3>Aboutを作る</h3>
+
+<p>
+  次に、自分について紹介するAboutを作ります。
+</p>
+
+<p>
+  Worksの「&lt;/section&gt;」のあと、
+  「&lt;/main&gt;」の前に次のコードを追加してください。
+</p>
+
+<pre><code>&lt;section id="about" class="section about"&gt;
+
+  &lt;p class="section-label"&gt;ABOUT&lt;/p&gt;
+
+  &lt;h2&gt;はじめまして、mioです。&lt;/h2&gt;
+
+  &lt;p class="about-text"&gt;
+    Webデザインを中心に、
+    個人で制作活動をしています。
+  &lt;/p&gt;
+
+  &lt;p class="about-text"&gt;
+    シンプルで使いやすく、
+    見る人に伝わりやすいデザインを大切にしています。
+  &lt;/p&gt;
+
+&lt;/section&gt;</code></pre>
+
+<p>
+  Aboutでは、名前や活動内容、
+  制作で大切にしていることなどを簡単に紹介しています。
+</p>
+
+<p>
+  今回のサイトでは、最初にWorksで作品を見せて
+  「何をしている人なのか」を伝えたあとにAboutを配置しています。
+  作品や活動に興味を持ってもらったあとで、
+  制作者自身についても知ってもらえる構成です。
+</p>
+
+<p>
+  自分のポートフォリオを作るときは、
+  経歴や使用できるツール、得意なことなど、
+  活動に合わせて内容を変更してみましょう。
+</p>
+
+<h3>Contactを作る</h3>
+
+<p>
+  次に、連絡先を掲載するContactを作ります。
+</p>
+
+<p>
+  Aboutの「&lt;/section&gt;」のあと、
+  「&lt;/main&gt;」の前に次のコードを追加してください。
+</p>
+
+<pre><code>&lt;section id="contact" class="section contact"&gt;
+
+  &lt;p class="section-label"&gt;CONTACT&lt;/p&gt;
+
+  &lt;h2&gt;お問い合わせはこちら&lt;/h2&gt;
+
+  &lt;p class="section-text"&gt;
+    制作についてのご相談は、
+    メールからお気軽にご連絡ください。
+  &lt;/p&gt;
+
+  &lt;a
+    href="mailto:example@example.com"
+    class="button"
+  &gt;
+    Mail →
+  &lt;/a&gt;
+
+&lt;/section&gt;</code></pre>
+
+<p>
+  Contactには、サイトを見た人が連絡できるように
+  メールへのリンクを用意しています。
+</p>
+
+<p>
+  「mailto:」のあとにメールアドレスを指定すると、
+  「Mail」をクリックしたときに、
+  パソコンやスマートフォンに設定されているメールアプリから
+  メールを作成できます。
+</p>
+
+<p>
+  実際に自分のサイトを作るときは、
+  「example@example.com」の部分を
+  自分の問い合わせ用メールアドレスに変更してください。
+</p>
+
+<h3>Footerを作る</h3>
+
+<p>
+  最後に、ページの一番下に表示するFooterを作ります。
+</p>
+
+<p>
+  「&lt;/main&gt;」のあと、
+  「&lt;/body&gt;」の前に次のコードを追加してください。
+</p>
+
+<pre><code>&lt;footer class="footer"&gt;
+  &lt;p&gt;© 2026 mio portfolio&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+<p>
+  Footerは、Webサイトの一番下に表示される部分です。
+  今回は、サイト名と著作権表記だけをシンプルに掲載しています。
+</p>
+
+<p>
+  これで、Webページに必要なHTMLがすべて完成しました。
+  「index.html」を保存したら、ブラウザでページを開いて
+  実際の表示を確認してみましょう。
+</p>
+
+<div class="article-screenshot">
+  <img
+    src="../images/sample-portfolio-html.png"
+    alt="HTMLだけで作成したポートフォリオサイト"
+  >
+  <p class="article-image-caption">
+    HTMLを作成した時点のWebページ
+  </p>
+</div>
+
+<p>
+  HTMLだけでも、見出しや文章、リンクなどの内容は
+  ブラウザに表示されています。
+  ただし、この段階ではまだデザインを設定していないため、
+  シンプルな見た目になっています。
+</p>
+
+<p>
+  次は「style.css」を編集して、
+  文字の大きさや色、余白、レイアウトなどを整えていきましょう。
+</p>
+
+<h2 id="write-css">5. CSSでWebサイトをデザインする</h2>
+
+<p>
+  HTMLでページの内容ができたら、
+  次は「style.css」を使ってWebサイトの見た目を整えていきます。
+</p>
+
+<p>
+  CSSでは、文字の大きさや色、余白、背景、
+  レイアウトなどを設定することができます。
+</p>
+
+<p>
+  VS Codeで「style.css」を開いて、
+  まずはページ全体の基本設定を書いてみましょう。
+</p>
+
+<pre><code>* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #4f5d66;
+  background: #f8fbfc;
+}
+
+a {
+  color: inherit;
+}</code></pre>
+
+<p>
+  「body」では、ページ全体の文字色や背景色、
+  使用するフォントなどを設定しています。
+</p>
+
+<p>
+  また「margin: 0;」を指定することで、
+  ブラウザに最初から設定されているページ外側の余白をなくしています。
+</p>
+
+<p>
+  「box-sizing: border-box;」は、
+  要素の幅や高さを扱いやすくするための設定です。
+  今回はすべての要素に適用しています。
+</p>
+
+<p>
+  「scroll-behavior: smooth;」を設定すると、
+  HeaderのWorksやAboutなどをクリックしたときに、
+  ページ内をなめらかに移動できるようになります。
+</p>
+
+<h3>Headerを整える</h3>
+
+<p>
+  次に、ページ上部のHeaderを整えます。
+</p>
+
+<p>
+  「style.css」に次のコードを追加してください。
+</p>
+
+<pre><code>.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 10%;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  font-size: 14px;
+  text-decoration: none;
+}</code></pre>
+
+<p>
+  「display: flex;」を使うと、
+  要素を横並びに配置することができます。
+</p>
+
+<p>
+  Headerでは「justify-content: space-between;」を使って、
+  左側にサイト名、右側にナビゲーションが配置されるようにしています。
+</p>
+
+<p>
+  「gap」では、Works・About・Contactの間隔を調整しています。
+</p>
+
+<h3>Heroを整える</h3>
+
+<p>
+  次に、ページを開いたときに最初に表示される
+  Heroのデザインを整えます。
+</p>
+
+<p>
+  「style.css」に次のコードを追加してください。
+</p>
+
+<pre><code>.hero {
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 10%;
+  background: #eaf5f9;
+}
+
+.hero-label,
+.section-label {
+  margin: 0 0 24px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .16em;
+  color: #82aebe;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1.4;
+}
+
+.hero-text {
+  margin: 28px 0 0;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.button {
+  width: fit-content;
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 24px;
+  border: 1px solid #9bc2d0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.button:hover {
+  background: #d9edf4;
+}</code></pre>
+
+<p>
+  Heroには「min-height」を設定して高さを確保し、
+  「display: flex;」と「justify-content: center;」を使って
+  内容が縦方向の中央付近に配置されるようにしています。
+</p>
+
+<p>
+  「padding」ではHeroの内側に余白を作り、
+  「background」では背景色を設定しています。
+</p>
+
+<p>
+  見出しには文字サイズや行間を設定し、
+  「button」ではリンクに余白や枠線を付けることで
+  ボタンのようなデザインにしています。
+</p>
+
+<p>
+  また「:hover」を使うと、
+  マウスカーソルをボタンに重ねたときのデザインを変更できます。
+  今回は背景色が少し濃くなるようにしています。
+</p>
+
+<h3>SectionとWorksを整える</h3>
+
+<p>
+  次に、WorksやAbout、Contactで共通して使用する
+  Sectionの余白や見出しを整えます。
+</p>
+
+<p>
+  「style.css」に次のコードを追加してください。
+</p>
+
+<pre><code>.section {
+  padding: 100px 10%;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.section-text {
+  margin: 20px 0 0;
+  line-height: 2;
+}</code></pre>
+
+<p>
+  「section」には上下左右の余白を設定し、
+  各エリアの内容が詰まりすぎないようにしています。
+</p>
+
+<p>
+  続いて、Worksにある2つの作品を
+  カードとして並べて表示します。
+</p>
+
+<pre><code>.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.work-card {
+  padding: 24px;
+  border: 1px solid #d7e4e9;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.work-image {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #dceef4;
+  color: #82aebe;
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+
+.work-card h3 {
+  margin: 24px 0 12px;
+  font-size: 20px;
+}
+
+.work-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}</code></pre>
+
+<p>
+  「display: grid;」を使うと、
+  複数の要素を行や列に並べることができます。
+</p>
+
+<p>
+  今回は「grid-template-columns: repeat(2, 1fr);」を指定して、
+  2つの作品カードが同じ幅で横に並ぶようにしています。
+  「gap」では、カード同士の間隔を設定しています。
+</p>
+
+<p>
+  「work-image」は、今回は作品画像の代わりになるエリアです。
+  「aspect-ratio」を使って横と縦の比率を指定しています。
+</p>
+
+<h3>About・Contact・Footerを整える</h3>
+
+<p>
+  最後に、About、Contact、Footerのデザインを整えます。
+</p>
+
+<p>
+  「style.css」に次のコードを追加してください。
+</p>
+
+<pre><code>.about {
+  background: #eef6f8;
+}
+
+.about-text {
+  max-width: 650px;
+  margin: 24px 0 0;
+  line-height: 2;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact .section-label {
+  text-align: center;
+}
+
+.contact .button {
+  margin-top: 32px;
+}
+
+.footer {
+  padding: 35px 10%;
+  text-align: center;
+  border-top: 1px solid #d7e4e9;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px;
+}</code></pre>
+
+<p>
+  Aboutでは背景色を変更して、
+  Worksとの区切りがわかりやすくなるようにしています。
+</p>
+
+<p>
+  「max-width」を設定すると文章が横に広がりすぎないため、
+  画面が大きい場合でも読みやすい幅に保つことができます。
+</p>
+
+<p>
+  Contactでは「text-align: center;」を使って、
+  見出しや文章を中央に配置しています。
+</p>
+
+<p>
+  Footerはページの一番下に細い線を入れ、
+  著作権表記が中央に表示されるシンプルなデザインにしています。
+</p>
+
+<div class="article-screenshot">
+  <img
+    src="../images/sample-portfolio-pc.png"
+    alt="CSSでデザインを整えたポートフォリオサイト"
+  >
+  <p class="article-image-caption">
+    CSSを追加したポートフォリオサイト
+  </p>
+</div>
+
+<p>
+  HTMLだけの状態と比べると、
+  文字の大きさや色、余白、背景、カードの配置などが整い、
+  Webサイトらしいデザインになりました。
+</p>
+
+<p>
+  このように、HTMLでページの内容や構造を作り、
+  CSSでその見た目を整えることでWebサイトを作ることができます。
+</p>
+
+<h2 id="responsive">6. スマートフォンでも見やすくする</h2>
+
+<p>
+  PC版のデザインができたら、
+  次はスマートフォンでも見やすくなるように調整します。
+</p>
+
+<p>
+  今回作ったサイトは、現在のCSSだけでも
+  画面幅に合わせてある程度レイアウトが変化します。
+  ただし、スマートフォンのような小さな画面では、
+  文字サイズや余白、作品カードの並びなどを調整すると、
+  さらに見やすくなります。
+</p>
+
+<h3>メディアクエリを追加する</h3>
+
+<p>
+  CSSでは「メディアクエリ」を使うことで、
+  画面の幅に応じて別のデザインを適用することができます。
+</p>
+
+<p>
+  「style.css」の一番下に、次のコードを追加してください。
+</p>
+
+<pre><code>@media (max-width: 700px) {
+
+  .header {
+    padding: 22px 7%;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 70px 7%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-text br {
+    display: none;
+  }
+
+  .section {
+    padding: 80px 7%;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .work-card {
+    padding: 20px;
+  }
+
+}</code></pre>
+
+<p>
+  「@media (max-width: 700px)」の中に書いたCSSは、
+  画面幅が700px以下になったときに適用されます。
+</p>
+
+<p>
+  今回は、Heroの見出しを少し小さくしたり、
+  ページ左右の余白を調整したりしています。
+</p>
+
+<p>
+  また、PCでは横に2つ並べていたWorksのカードを
+  「grid-template-columns: 1fr;」に変更することで、
+  スマートフォンでは1列に表示されるようにしています。
+</p>
+
+<h2 id="final-check">7. ブラウザで最終確認する</h2>
+
+<p>
+  HTMLとCSSが完成したら、
+  最後にブラウザでサイト全体を確認しましょう。
+</p>
+
+<p>
+  見た目だけでなく、リンクやボタンが正しく動くか、
+  パソコンとスマートフォンの両方で問題なく表示されるかも確認します。
+</p>
+
+<div class="article-checklist">
+
+  <p class="article-checklist-title">
+    最後に確認したいこと
+  </p>
+
+  <ul>
+    <li>文字や画像が画面からはみ出していない</li>
+    <li>Works・About・Contactへのリンクが正しく動く</li>
+    <li>Mailボタンからメールを作成できる</li>
+    <li>作品カードが正しく表示されている</li>
+    <li>パソコンとスマートフォンの両方で見やすく表示される</li>
+  </ul>
+
+</div>
+
+<p>
+  気になるところがあれば、
+  VS CodeでHTMLやCSSを編集して、もう一度ブラウザで確認します。
+  「編集する → 保存する → ブラウザで確認する」を繰り返しながら、
+  サイトを整えていきましょう。
+</p>
+
+<h2 id="publish">8. 完成したWebサイトを公開するには？</h2>
+
+<p>
+  ここまでで、HTMLとCSSを使った
+  ポートフォリオサイトが完成しました。
+</p>
+
+<p>
+  現在は自分のパソコンの中にあるため、
+  URLを使ってほかの人に見てもらうには、
+  Web上にサイトを公開する必要があります。
+</p>
+
+<p>
+  HTMLとCSSで作ったサイトを公開する方法はいくつかありますが、
+  GitHubにサイトのファイルを保存し、
+  Netlifyと連携して無料で公開する方法もあります。
+</p>
+
+<p>
+  GitHubやNetlifyを使った公開方法については、
+  別の記事で詳しく紹介する予定です。
+</p>
+
+<h2 id="summary">まとめ</h2>
+
+<p>
+  今回は、VS Codeを使ってHTMLとCSSを書き、
+  シンプルなポートフォリオサイトを作りました。
+</p>
+
+<p>
+  HTMLでページの内容や構造を作り、
+  CSSで文字や色、余白、レイアウトを整えることで、
+  自分でWebサイトを作ることができます。
+</p>
+
+<p>
+  最初からすべてのコードを覚える必要はありません。
+  まずは実際にコードを書いて表示を確認しながら、
+  少しずつ変更してみるところから始めてみてください。
+</p>
+
+<p>
+  サイトの基本的な作り方がわかったら、
+  文章や色、作品などを自分の内容に変更して、
+  自分だけのポートフォリオサイトにしてみましょう。
+</p>
+        
+<h2 id="portfolio-template">自分で作るのが難しいときは</h2>
+
+<p>
+  ポートフォリオサイトは自分で作ることもできますが、
+  HTMLやCSSを一から書いたり、デザインやページ構成を考えたりするには
+  ある程度の時間が必要です。
+</p>
+
+<p>
+  「自分のサイトはほしいけれど、どこから作ればいいかわからない」
+  「デザインを一から考えるのが難しい」という場合は、
+  ポートフォリオ用のテンプレートを使う方法もあります。
+</p>
+
+<p>
+  テンプレートを使えば、あらかじめ用意されたページをもとに、
+  プロフィールや作品、文章、画像などを自分の内容に変更しながら
+  サイトを作ることができます。
+</p>
+
+<h3>テンプレートを使って、自分のサイトを作る</h3>
+
+<p>
+  shizuki-studioでは、
+  HTMLとCSSで作られたポートフォリオサイトのテンプレートを
+  用意しています。
+</p>
+
+<p>
+  ファイルの編集方法からWeb上に公開するまでの手順をまとめた
+  説明書も付属しているため、
+  初めて自分のWebサイトを作る方にも使っていただけます。
+</p>
+
+<p>
+  自分の活動をまとめる場所がほしいと思ったら、
+  まずは小さなサイトから作ってみてください。
+  作品や活動と一緒に少しずつ更新していけば、
+  自分らしいポートフォリオサイトに育てていくことができます。
+</p>
+
+      </div>
+
+
+      <!-- 商品導線 -->
+      <aside class="article-product">
+
+  <div class="article-product-content">
+
+    <p class="article-product-label">
+      PORTFOLIO TEMPLATE
+    </p>
+
+    <h2>
+      すぐに使える<br>
+      ポートフォリオテンプレート
+    </h2>
+
+    <p>
+      shizuki-studioでは、HTMLとCSSを編集して使える
+      シンプルなポートフォリオサイトのテンプレートを販売しています。
+    </p>
+
+    <a
+      href="https://shizuki-studio.booth.pm/items/8751640"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button"
+    >
+      商品を見る
+    </a>
+
+  </div>
+
+  <div class="article-product-image">
+    <img
+      src="../images/portfolio-template.png"
+      alt="shizuki-studio ポートフォリオテンプレート"
+    >
+  </div>
+
+</aside>
+
+
+      <!-- 記事一覧へ -->
+      <div class="article-back">
+        <a href="index.html">← Articlesへ戻る</a>
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-brand">
+      <img src="../images/studio-icon.png" alt="" class="footer-logo-icon">
+
+      <div class="footer-logo-text">
+        <span class="footer-logo-main">shizuki-studio</span>
+        <span class="footer-logo-sub">DIGITAL PRODUCT STUDIO</span>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 shizuki-studio</p>
+
+  </footer>
+
+</body>
+</html>
